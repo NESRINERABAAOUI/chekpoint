@@ -8,8 +8,8 @@ const client = mysql.createPool({
   host: DB_HOST,
   port: DB_PORT,
   user: DB_USER,
-  password: DB_PASSWORD,
-  database: DB_NAME,
+  password: "Khalil2018@",
+  database: "Wild Series",
 });
 
 client.checkConnection = () => {
@@ -17,7 +17,7 @@ client.checkConnection = () => {
   client
     .getConnection()
     .then((connection) => {
-      console.info(`Using database ${DB_NAME}`);
+      console.info(`Using database ${"Wild Series"}`);
 
       connection.release();
     })
@@ -32,7 +32,7 @@ client.checkConnection = () => {
 };
 
 // Store database name into client for further uses
-client.databaseName = DB_NAME;
+client.databaseName = "Wild Series";
 
 // Ready to export
 module.exports = client;
